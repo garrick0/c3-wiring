@@ -1,6 +1,11 @@
 /**
- * Wiring module public API
+ * C3 Wiring Package
+ * Dependency injection and context wiring
+ * @packageDocumentation
  */
+
+// Force TypeScript to emit index.d.ts
+export {};
 
 export * from './Container.js';
 export * from './dependencies.js';
