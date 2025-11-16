@@ -1,19 +1,11 @@
-# Source files
-src/
-*.test.ts
-*.spec.ts
-
-# Config files
-tsconfig.json
-vitest.config.ts
-
-# Development files
-.vscode/
-.github/
+# Include dist/ in npm package (override .gitignore)
+# Only exclude dev files
 node_modules/
 coverage/
 *.log
-
-# Git
-.git/
-.gitignore
+.DS_Store
+src/
+tests/
+tsconfig.json
+vitest.config.ts
+.github/
