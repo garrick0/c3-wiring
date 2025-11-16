@@ -14,8 +14,6 @@
     "dev": "tsc --watch",
     "test": "vitest run",
     "clean": "rm -rf dist",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run test",
     "version:dev": "npm version prerelease --preid=dev.$(git rev-parse --short HEAD) --no-git-tag-version",
     "version:canary": "npm version prerelease --preid=canary"
   },
