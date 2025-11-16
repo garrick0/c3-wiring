@@ -12,7 +12,7 @@ import {
   createConfigurationService,
   createPresetManager,
   LogLevel
-} from 'c3-shared';
+} from '@garrick0/c3-shared';
 
 /**
  * Bootstrap the application

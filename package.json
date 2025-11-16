@@ -1,23 +1,36 @@
 {
-  "name": "c3-wiring",
-  "version": "0.1.0",
+  "name": "@garrick0/c3-wiring",
+  "version": "0.1.0-dev.0",
   "description": "Dependency injection and context wiring for C3",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "vitest run"
+    "test": "vitest run",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run test",
+    "prepare": "npm run build",
+    "version:dev": "npm version prerelease --preid=dev.$(git rev-parse --short HEAD) --no-git-tag-version",
+    "version:canary": "npm version prerelease --preid=canary"
   },
   "author": "garrick0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garrick0/c3-wiring.git"
+  },
   "dependencies": {
-    "c3-shared": "^0.1.0",
-    "c3-parsing": "^0.1.0",
-    "c3-compliance": "^0.1.0",
-    "c3-projection": "^0.1.0",
-    "c3-discovery": "^0.1.0"
+    "@garrick0/c3-shared": "dev",
+    "@garrick0/c3-parsing": "dev",
+    "@garrick0/c3-compliance": "dev",
+    "@garrick0/c3-projection": "dev",
+    "@garrick0/c3-discovery": "dev"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
@@ -25,6 +38,7 @@
     "vitest": "^1.0.4"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   }
 }

@@ -76,7 +76,26 @@ export const TOKENS = {
   // Factories
   PARSER_FACTORY: 'ParserFactory',
   EVALUATOR_FACTORY: 'EvaluatorFactory',
-  RENDERER_FACTORY: 'RendererFactory'
+  RENDERER_FACTORY: 'RendererFactory',
+
+  // Extensions (c3-parsing v2.0.0)
+  TYPESCRIPT_EXTENSION: 'TypeScriptExtension',
+  FILESYSTEM_EXTENSION: 'FilesystemExtension',
+
+  // Graph Services
+  GRAPH_LOADER: 'GraphLoader',
+
+  // Module Analysis Services (c3-projection)
+  MODULE_AGGREGATOR: 'ModuleAggregator',
+  MODULE_DEPENDENCY_CALCULATOR: 'ModuleDependencyCalculator',
+  MODULE_PROJECTION_STRATEGY: 'ModuleProjectionStrategy',
+  GRAPH_VIEW_BUILDER: 'GraphViewBuilder',
+  LAYOUT_ENGINE: 'LayoutEngine',
+
+  // Exporters
+  JSON_EXPORTER: 'JSONExporter',
+  GRAPHML_EXPORTER: 'GraphMLExporter',
+  SVG_EXPORTER: 'SVGExporter'
 } as const;
 
 export type Token = typeof TOKENS[keyof typeof TOKENS];
